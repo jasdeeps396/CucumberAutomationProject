@@ -3,7 +3,6 @@ package com.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import com.stepDefinitions.WebElement;
 
 public class LoginPage {
 
@@ -13,7 +12,7 @@ public class LoginPage {
 	private By submit = By.xpath("//input[@type='submit']");
 	private By logoutLinkLocator = By.linkText("Logout");
 	private By homePageElement = By.id("slider-carousel");
-	private By signupLoginButton = By.xpath("//a[contains(text(),'Signup / Login')]");
+	private By signupLoginButton = By.xpath("//a[@href='/login']");
 	private By loginHeader = By.xpath("//h2[contains(text(),'Login to your account')]");
 	private By loggedInMessage = By.xpath("//a[contains(text(),'Logged in as')]");
 	private By warningMessageLocater = By.xpath("//div[@class='alert alert-danger alert-dismissible']");
