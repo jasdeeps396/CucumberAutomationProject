@@ -5,13 +5,13 @@
 
   Scenario: Successful Login with Correct Credentials
   
-    Given I navigate to 'http://automationexercise.com'
+    Given I navigate to automationexercise.com
     Then I should see the home page successfully
-    When I click on the 'Signup / Login' button
-    Then I should see 'Login to your account' visible
-    When I enter a valid email address and password
-    And I click the 'login' button
-    Then I should see 'Logged in as username' visible    
+    When I click on the Signup Login button
+    Then I should see Login to your account visible
+    When I enter a valid email address jasdeeps426@yopmail.com and password Test@1234
+    And I click the login button
+    Then I should see Logged in as username visible    
     
 #	Scenario Outline: Unsuccessful login with invalid credentials
    #
