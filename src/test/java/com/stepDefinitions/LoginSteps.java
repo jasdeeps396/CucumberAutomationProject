@@ -12,20 +12,16 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class LoginSteps {
-	
-private WebDriver driver;
-	private LoginPage loginPage ;
-	private HomePage homePage ;
-	
-	
-	public LoginSteps()
-	{
-		this.driver= DriverFactory.getDriver();
-		this.loginPage=new LoginPage(driver);
-		this.homePage =  new HomePage(driver);
+
+	private WebDriver driver;
+	private LoginPage loginPage;
+	private HomePage homePage;
+
+	public LoginSteps() {
+		this.driver = DriverFactory.getDriver();
+		this.loginPage = new LoginPage(driver);
+		this.homePage = new HomePage(driver);
 	}
-	
-	
 
 	@Given("I navigate to automationexercise.com")
 	public void i_navigate_to_automation_exercise() {
@@ -40,19 +36,19 @@ private WebDriver driver;
 
 	@Then("I should see the home page successfully")
 	public void i_should_see_home_page_successfully() {
-		
+
 		Assert.assertTrue(homePage.verifyHomePage());
 	}
 
 	@When("I click on the Signup Login button")
 	public void i_click_on_signup_login_button() {
-		
-		homePage.clickOnSignUpLoginButton();	
+
+		homePage.clickOnSignUpLoginButton();
 	}
 
 	@Then("I should see Login to your account visible")
 	public void i_should_see_login_to_your_account_visible() {
-		
+
 		Assert.assertTrue(loginPage.loginHeader());
 	}
 
@@ -65,13 +61,13 @@ private WebDriver driver;
 	@And("I click the login button")
 	public void i_click_login_button() {
 		loginPage.clickOnLoginButton();
- 
+
 	}
 
 	@Then("I should see Logged in as username visible")
-	    public void i_should_see_logged_in_as_username_visible() {
-	       
-	        Assert.assertTrue(homePage.verifyLoginMessage());
-	        
-	    }
+	public void i_should_see_logged_in_as_username_visible() {
+
+		Assert.assertTrue(homePage.verifyLoginMessage());
+
+	}
 }

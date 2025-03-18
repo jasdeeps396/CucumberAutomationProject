@@ -19,23 +19,23 @@ public class DriverFactory {
 
 		if (browser.equalsIgnoreCase("chrome")) {
 
-            ChromeOptions options = new ChromeOptions();
-            options.addArguments("--disable-notifications");
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--disable-notifications");
 			driver.set(new ChromeDriver());
 
 			System.out.println("Chrome browser is set");
 		} else if (browser.equalsIgnoreCase("firefox")) {
 
-            FirefoxOptions options = new FirefoxOptions();
-            options.addArguments("--disable-notifications");
+			FirefoxOptions options = new FirefoxOptions();
+			options.addArguments("--disable-notifications");
 			driver.set(new FirefoxDriver());
 
 			System.out.println("Firefox browser is set");
 		} else if (browser.equalsIgnoreCase("safari")) {
-        	
-            SafariOptions options = new SafariOptions();
-            options.setAutomaticInspection(true);
-            options.setAutomaticProfiling(true);
+
+			SafariOptions options = new SafariOptions();
+			options.setAutomaticInspection(true);
+			options.setAutomaticProfiling(true);
 			driver.set(new SafariDriver());
 
 			System.out.println("Safari browser is set");
