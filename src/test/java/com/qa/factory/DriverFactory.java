@@ -11,7 +11,7 @@ import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
 
 public class DriverFactory {
-	private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+	private static WebDriver driver;
 
 	public WebDriver init_driver(String browser) {
 
@@ -21,14 +21,14 @@ public class DriverFactory {
 
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--disable-notifications");
-			driver.set(new ChromeDriver());
+			driver = new ChromeDriver();
 
 			System.out.println("Chrome browser is set");
 		} else if (browser.equalsIgnoreCase("firefox")) {
 
 			FirefoxOptions options = new FirefoxOptions();
 			options.addArguments("--disable-notifications");
-			driver.set(new FirefoxDriver());
+			driver = new FirefoxDriver();
 
 			System.out.println("Firefox browser is set");
 		} else if (browser.equalsIgnoreCase("safari")) {
@@ -36,7 +36,7 @@ public class DriverFactory {
 			SafariOptions options = new SafariOptions();
 			options.setAutomaticInspection(true);
 			options.setAutomaticProfiling(true);
-			driver.set(new SafariDriver());
+			driver = new SafariDriver();
 
 			System.out.println("Safari browser is set");
 		} else {
@@ -46,14 +46,25 @@ public class DriverFactory {
 		getDriver().manage().deleteAllCookies();
 		getDriver().manage().window().maximize();
 		getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
-		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		return getDriver();
 	}
 
 	public static synchronized WebDriver getDriver() {
-		if (driver.get() == null) {
+		if (driver == null) {
 			throw new RuntimeException("WebDriver is not initialized. Call init_driver() first.");
 		}
-		return driver.get();
+		return driver;
 	}
+
+	public static void quitDriver() {
+		if(driver!=null)
+		{
+		driver.quit();
+	
+		}
+	}
+	
+	
+	
 }
