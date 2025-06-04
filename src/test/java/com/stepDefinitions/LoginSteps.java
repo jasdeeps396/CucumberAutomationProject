@@ -2,10 +2,10 @@ package com.stepDefinitions;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-
 import com.pages.HomePage;
 import com.pages.LoginPage;
 import com.qa.factory.DriverFactory;
+import com.qa.util.YamlReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -54,8 +54,14 @@ public class LoginSteps {
 
 	@When("I enter a valid email address {} and password {}")
 	public void i_enter_valid_email_and_password(String email, String password) {
-		loginPage.enterUsername(email);
-		loginPage.enterPassword(password);
+		loginPage.enterUsername(YamlReader.getValueByPath("login_valid_user.email", String.class));
+		loginPage.enterPassword(YamlReader.getValueByPath("login_valid_user.password", String.class));
+	}
+
+	@When("I enter a invalid email address and password")
+	public void i_enter_invalid_email_and_password() {
+		loginPage.enterUsername(YamlReader.getValueByPath("login_invalid_user.email", String.class));
+		loginPage.enterPassword(YamlReader.getValueByPath("login_invalid_user.password", String.class));
 	}
 
 	@And("I click the login button")
@@ -70,4 +76,10 @@ public class LoginSteps {
 		Assert.assertTrue(homePage.verifyLoginMessage());
 
 	}
+
+	@When("I click on logout button")
+	public void i_click_on_button() {
+		loginPage.clickOnLogoutButton();
+	}
+
 }

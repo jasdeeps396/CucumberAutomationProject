@@ -1,13 +1,6 @@
 package com.pages;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.Duration;
-import java.util.Map;
-
-import javax.lang.model.element.Element;
-
-import org.apache.commons.math3.linear.IllConditionedOperatorException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -15,24 +8,23 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.internal.invokers.AbstractParallelWorker.Arguments;
-
+import com.qa.util.YamlReader;
 import io.cucumber.datatable.DataTable;
-import java.util.Date;
+
 
 public class RegisterPage {
-	
+
 	private WebDriver driver;
-	
-	private By signUpHeader =  By.xpath("//h2[text()='New User Signup!']");
-	private By signUpName =  By.xpath("//input[@data-qa='signup-name']");
+
+	private By signUpHeader = By.xpath("//h2[text()='New User Signup!']");
+	private By signUpName = By.xpath("//input[@data-qa='signup-name']");
 	private By signUpEmail = By.xpath("//input[@data-qa='signup-email']");
 	private By signUpButton = By.xpath("//button[@data-qa='signup-button']");
-	private By maleGender=By.id("uniform-id_gender1");
-	private By femaleGender= By.id("uniform-id_gender2");
-	private By password =By.id("password");
+	private By maleGender = By.id("uniform-id_gender1");
+	private By femaleGender = By.id("uniform-id_gender2");
+	private By password = By.id("password");
 	private By dayElement = By.id("days");
-	private By monthElement =By.id("months");
+	private By monthElement = By.id("months");
 	private By yearElement = By.id("years");
 	private By option1 = By.id("uniform-newsletter");
 	private By option2 = By.id("uniform-optin");
@@ -49,160 +41,157 @@ public class RegisterPage {
 	private By createAccountButton = By.xpath("//button[@data-qa='create-account']");
 	private By conitnueButton = By.xpath("//a[@data-qa='continue-button']");
 	private By deleteAccountButton = By.xpath("//a[@href='/delete_account']");
-	
-	
-	
-	public RegisterPage(WebDriver driver)
-	{
+
+	public RegisterPage(WebDriver driver) {
 		this.driver = driver;
 	}
-	
-	
+
 	public boolean verifySignUpHeader() {
 		return driver.findElement(signUpHeader).isDisplayed();
 	}
-	
-	public void enterSignUpName(String name)
-	{
+
+	public void enterSignUpName(String name) {
 		driver.findElement(signUpName).sendKeys(name);
 	}
-	
-	public void enterSignUpEmail(String email)
-	{
+
+	public void enterSignUpEmail(String email) {
 		driver.findElement(signUpEmail).sendKeys(email);
 	}
-	public void clickOnSignUpButton()
-	{
+
+	public void clickOnSignUpButton() {
 		driver.findElement(signUpButton).click();
 	}
-	
-	public void verifyDisplayedText(String ExpectedText)
-	{
-		driver.getPageSource().contains(ExpectedText);
+
+	public boolean verifyDisplayedText(String ExpectedText) {
+		
+		return driver.getPageSource().contains(ExpectedText);
 	}
 
+	public void fillAccountDetails() throws Exception {
+//		Map<String, String> data= datatable.asMaps().get(0);
 
-	public void fillAccountDetails(DataTable datatable) throws Exception {
-		Map<String, String> data= datatable.asMaps().get(0);
-		
-		if(data.get("Title").equalsIgnoreCase("Mr."))
-		{
+		if (YamlReader.getValueByPath("register_user.title", String.class).equalsIgnoreCase("Mr.")) {
 			driver.findElement(maleGender).click();
-		}
-		else {
+		} else {
 			driver.findElement(femaleGender).click();
 		}
 
-		driver.findElement(password).sendKeys(data.get("Password"));
-		
-		String stringDate = data.get("Date of Birth");
-		
-		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
-	    Date date = simpleDateFormat.parse(stringDate);
-	    
-	    String day = new SimpleDateFormat("d").format(date);
-	    String month = new SimpleDateFormat("M").format(date);
-	    String year = new SimpleDateFormat("yyyy").format(date);
-	    
-	    		
-	    
-	    Select dayDropDown=new Select(driver.findElement(dayElement));
-	    dayDropDown.selectByVisibleText(day);
-	    
-	    Select monthDropDown = new Select(driver.findElement(monthElement));
-	    monthDropDown.selectByValue(month);
-	    
-	    Select yearDropDown = new Select(driver.findElement(yearElement));
-	    yearDropDown.selectByValue(year);
-	    
-	    
-	    
-	    
-	    
-				
-				
-		
-		// TODO Auto-generated method stub
-		
-	}
+		driver.findElement(password).sendKeys(YamlReader.getValueByPath("register_user.password", String.class));
 
+//		String stringDate = data.get("Date of Birth");
+
+//		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+//	    Date date = simpleDateFormat.parse(stringDate);
+//	    
+//	    String day = new SimpleDateFormat("d").format(date);
+//	    String month = new SimpleDateFormat("M").format(date);
+//	    String year = new SimpleDateFormat("yyyy").format(date);
+
+		int day = YamlReader.getValueByPath("register_user.dob.day", Integer.class);
+		int month = YamlReader.getValueByPath("register_user.dob.month", Integer.class);
+		int year = YamlReader.getValueByPath("register_user.dob.year", Integer.class);
+		Select dayDropDown = new Select(driver.findElement(dayElement));
+		dayDropDown.selectByIndex(day);
+
+		Select monthDropDown = new Select(driver.findElement(monthElement));
+		monthDropDown.selectByIndex(month);
+
+		Select yearDropDown = new Select(driver.findElement(yearElement));
+		yearDropDown.selectByValue(String.valueOf(year));
+
+		// TODO Auto-generated method stub
+
+	}
 
 	public void clickOnSelectbutton(String checkBoxOption) {
 		WebElement element;
-		if(checkBoxOption.equals("Sign up for our newsletter!"))
-				{
+		if (checkBoxOption.equals("Sign up for our newsletter!")) {
 			element = driver.findElement(option1);
-				}
-		else if(checkBoxOption.equals("Receive special offers from our partners!"))
-				{
+		} else if (checkBoxOption.equals("Receive special offers from our partners!")) {
 			element = driver.findElement(option2);
-				}
-		else {
+		} else {
 			throw new IllegalArgumentException("Invalid checkbox option: " + checkBoxOption);
 		}
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-	   ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
-		
-		
-		
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+
 	}
-	
 
-
-	public void fillPersonalDetails(DataTable datatable) {
+	public void fillPersonalDetails() {
 		// TODO Auto-generated method stub
-		
-		Map<String, String> personalDetails = datatable.asMaps().get(0);
-		driver.findElement(firstName).sendKeys(personalDetails.get("First Name"));
-		driver.findElement(lastName).sendKeys(personalDetails.get("Last Name"));
-		driver.findElement(companyName).sendKeys(personalDetails.get("Company"));
-		driver.findElement(address1).sendKeys(personalDetails.get("Address"));
-		driver.findElement(address2).sendKeys(personalDetails.get("Address2"));
 
-		
-		
+//		Map<String, String> personalDetails = datatable.asMaps().get(0);
+//		driver.findElement(firstName).sendKeys(personalDetails.get("First Name"));
+//		driver.findElement(lastName).sendKeys(personalDetails.get("Last Name"));
+//		driver.findElement(companyName).sendKeys(personalDetails.get("Company"));
+//		driver.findElement(address1).sendKeys(personalDetails.get("Address"));
+//		driver.findElement(address2).sendKeys(personalDetails.get("Address2"));
+//		
+//		Select selectCountry = new Select(driver.findElement(countryName));
+//		selectCountry.selectByValue(personalDetails.get("Country"));
+//		
+//		driver.findElement(stateName).sendKeys(personalDetails.get("State"));
+//		driver.findElement(cityName).sendKeys(personalDetails.get("City"));
+//		driver.findElement(zipcode).sendKeys(personalDetails.get("Zipcode"));
+//		driver.findElement(mobile_number).sendKeys(personalDetails.get("Mobile Number"));
+
+		driver.findElement(firstName)
+				.sendKeys(YamlReader.getValueByPath("register_user.address.first_name", String.class));
+		driver.findElement(lastName)
+				.sendKeys(YamlReader.getValueByPath("register_user.address.last_name", String.class));
+		driver.findElement(companyName)
+				.sendKeys(YamlReader.getValueByPath("register_user.address.company", String.class));
+		driver.findElement(address1)
+				.sendKeys(YamlReader.getValueByPath("register_user.address.address1", String.class));
+		driver.findElement(address2)
+				.sendKeys(YamlReader.getValueByPath("register_user.address.address2", String.class));
+
 		Select selectCountry = new Select(driver.findElement(countryName));
-		selectCountry.selectByValue(personalDetails.get("Country"));
-		
-		
-		driver.findElement(stateName).sendKeys(personalDetails.get("State"));
-		driver.findElement(cityName).sendKeys(personalDetails.get("City"));
-		driver.findElement(zipcode).sendKeys(personalDetails.get("Zipcode"));
-		driver.findElement(mobile_number).sendKeys(personalDetails.get("Mobile Number"));
-		
-		
-		
-		
-		
-		
-	}
+		selectCountry.selectByValue(YamlReader.getValueByPath("register_user.address.country", String.class));
 
+		driver.findElement(stateName).sendKeys(YamlReader.getValueByPath("register_user.address.state", String.class));
+		driver.findElement(cityName).sendKeys(YamlReader.getValueByPath("register_user.address.city", String.class));
+		driver.findElement(zipcode).sendKeys(YamlReader.getValueByPath("register_user.address.zipcode", String.class));
+		driver.findElement(mobile_number)
+				.sendKeys(YamlReader.getValueByPath("register_user.address.mobile_number", String.class));
+
+	}
 
 	public void clickOnCreateAccountButton() {
 		// TODO Auto-generated method stub
-	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-	wait.until(ExpectedConditions.elementToBeClickable(createAccountButton));
-    JavascriptExecutor js = (JavascriptExecutor) driver;
-    js.executeScript("arguments[0].scrollIntoView();", driver.findElement(createAccountButton));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(createAccountButton));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView();", driver.findElement(createAccountButton));
 		driver.findElement(createAccountButton).click();
-		
+
 	}
-	
-	public void clickConitnueButton() 
-	{
-		
-		
+
+	public void clickConitnueButton() {
+
 		driver.findElement(conitnueButton).click();
 	}
 
-
 	public void clickonDeleteButton() {
-		
-		
+
 		driver.findElement(deleteAccountButton).click();
-		
+
 	}
-	
-	
+
+	public void enterExistingSignUpEmail() {
+
+		driver.findElement(signUpEmail).sendKeys(YamlReader.getValueByPath("existing_email_data.email", String.class));
+
+	}
+
+	public void enterExistingSignUpName() {
+
+		driver.findElement(signUpName).sendKeys(YamlReader.getValueByPath("existing_email_data.name", String.class));
+	}
+
+	public boolean verifyErrorMessage(String expectedErrorMessage) {
+		return driver.getPageSource().contains(expectedErrorMessage);
+
+	}
 
 }

@@ -2,7 +2,7 @@
   As a registered user
   I want to log in with my correct email and password
   So that I can access my account
-
+  @login
   Scenario: Successful Login with Correct Credentials
   
     Given I navigate to automationexercise.com
@@ -11,20 +11,34 @@
     Then I should see Login to your account visible
     When I enter a valid email address jasdeeps426@yopmail.com and password Test@1234
     And I click the login button
-    Then I should see Logged in as username visible    
+    Then I should see Logged in as username visible
     
-#	Scenario Outline: Unsuccessful login with invalid credentials
-   #
-    #And   I have entered invalid <username> and <password>
-    #When  I click on the login button
-    #Then  I should get invalid creds message <messages>
-    #
-    #Examples:
-    #	| username          |  password       | messages                                              |
-    #	| invalid@email.com | invalidPassword | Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour. |
-    #	| abcccc            | validPassword   | Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour. |
-    #	| valid@email.com   | abccc           | Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour. |
-    #
+  @login  
+  Scenario: Successful Login with incorrect Credentials
+  
+    Given I navigate to automationexercise.com
+    Then I should see the home page successfully
+    When I click on the Signup Login button
+    Then I should see Login to your account visible
+    When I enter a invalid email address and password 
+    And I click the login button
+    Then I should see "Your email or password is incorrect!" text
+ 
+  @login
+  Scenario: User logs out successfully after logging in
+  
+    Given I navigate to automationexercise.com
+    Then I should see the home page successfully
+    When I click on the Signup Login button
+    Then I should see Login to your account visible
+    When I enter a valid email address jasdeeps426@yopmail.com and password Test@1234
+    And I click the login button
+    Then I should see Logged in as username visible   
+    When I click on logout button
+    Then I should see Login to your account visible
+        
+    
+
 
     
     

@@ -55,7 +55,7 @@
 			<version>${testng.version}</version>
 			<scope>test</scope>
 		</dependency>
-	
+
 		<!--
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 
@@ -113,6 +113,13 @@
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
 			<version>5.3.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.yaml/snakeyaml -->
+		<dependency>
+			<groupId>org.yaml</groupId>
+			<artifactId>snakeyaml</artifactId>
+			<version>2.4</version>
 		</dependency>
 
 	</dependencies>

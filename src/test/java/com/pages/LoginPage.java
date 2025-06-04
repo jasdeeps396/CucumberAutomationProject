@@ -44,6 +44,10 @@ public class LoginPage {
 		return driver.findElement(logoutLinkLocator).isDisplayed();
 	}
 
+	public void clickOnLogoutButton() {
+		driver.findElement(logoutLinkLocator).click();
+	}
+
 	public String verifyInvalidCredsMessage() {
 		return driver.findElement(warningMessageLocater).getText();
 	}
