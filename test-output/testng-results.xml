@@ -2,26 +2,26 @@
 <testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-31T01:26:28 IST" name="Default suite" finished-at="2025-05-31T01:28:15 IST" duration-ms="107184">
+  <suite started-at="2025-11-23T12:10:50 IST" name="Default suite" finished-at="2025-11-23T12:15:05 IST" duration-ms="255101">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.TestRunner@1e66f1f5]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.TestRunner@934b6cb]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-05-31T01:26:28 IST" name="Default test" finished-at="2025-05-31T01:28:15 IST" duration-ms="107184">
+    <test started-at="2025-11-23T12:10:50 IST" name="Default test" finished-at="2025-11-23T12:15:05 IST" duration-ms="255101">
       <class name="testRunners.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunners.TestRunner@1e66f1f5]" started-at="2025-05-31T01:26:28 IST" name="setUpClass" finished-at="2025-05-31T01:26:29 IST" duration-ms="1029" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunners.TestRunner@934b6cb]" started-at="2025-11-23T12:10:50 IST" name="setUpClass" finished-at="2025-11-23T12:10:52 IST" duration-ms="2009" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@6fbf5db2]]>
+                <![CDATA[org.testng.TestRunner@4e4f4092]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.TestRunner@1e66f1f5]" started-at="2025-05-31T01:26:29 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-05-31T01:26:53 IST" duration-ms="23601" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.TestRunner@934b6cb]" started-at="2025-11-23T12:10:52 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-23T12:11:22 IST" duration-ms="29720" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.TestRunner@1e66f1f5]" started-at="2025-05-31T01:26:53 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-05-31T01:27:04 IST" duration-ms="11640" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.TestRunner@934b6cb]" started-at="2025-11-23T12:11:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-23T12:11:47 IST" duration-ms="24791" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -53,7 +53,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.TestRunner@1e66f1f5]" started-at="2025-05-31T01:27:04 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-05-31T01:27:17 IST" duration-ms="12537" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.TestRunner@934b6cb]" started-at="2025-11-23T12:11:47 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-23T12:12:39 IST" duration-ms="52025" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -69,7 +69,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.TestRunner@1e66f1f5]" started-at="2025-05-31T01:27:17 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-05-31T01:27:28 IST" duration-ms="11275" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.TestRunner@934b6cb]" started-at="2025-11-23T12:12:39 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-23T12:13:51 IST" duration-ms="72590" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -82,65 +82,52 @@
               </value>
             </param>
           </params>
-          <exception class="io.cucumber.core.exception.CucumberException">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Step [I enter a name and email address] is defined with 2 parameters at 'com.stepDefinitions.RegisterSteps.i_enter_a_name_and_email_address(java.lang.String,java.lang.String)'.
-However, the gherkin step has 0 arguments.
-Step text: I enter a name and email address]]>
+              <![CDATA[timeout: Timed out receiving message from renderer: 60.000
+  (Session info: chrome=142.0.7444.135)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [731b028fcbe6ef08171470d6c8240402, clickElement {id=f.1372E90B6C01BD79CC335E43708C19ED.d.5DFB0F8274DF0DAD2CAC75E933E326C2.e.7}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.135, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\jasde\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54915}, goog:processID: 100, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54915/devtoo..., se:cdpVersion: 142.0.7444.135, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (731b028fcbe6ef08171470d6c8240402)] -> xpath: //a[@href='/login']]
+Session ID: 731b028fcbe6ef08171470d6c8240402]]>
             </message>
             <full-stacktrace>
-              <![CDATA[io.cucumber.core.exception.CucumberException: Step [I enter a name and email address] is defined with 2 parameters at 'com.stepDefinitions.RegisterSteps.i_enter_a_name_and_email_address(java.lang.String,java.lang.String)'.
-However, the gherkin step has 0 arguments.
-Step text: I enter a name and email address
-at io.cucumber.core.runner.PickleStepDefinitionMatch.arityMismatch(PickleStepDefinitionMatch.java:82)
-at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:41)
-at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
-at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
-at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
-at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:135)
-at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
-at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
-at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:132)
-at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 60.000
+  (Session info: chrome=142.0.7444.135)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [731b028fcbe6ef08171470d6c8240402, clickElement {id=f.1372E90B6C01BD79CC335E43708C19ED.d.5DFB0F8274DF0DAD2CAC75E933E326C2.e.7}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.135, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\jasde\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54915}, goog:processID: 100, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54915/devtoo..., se:cdpVersion: 142.0.7444.135, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (731b028fcbe6ef08171470d6c8240402)] -> xpath: //a[@href='/login']]
+Session ID: 731b028fcbe6ef08171470d6c8240402
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at com.pages.HomePage.clickOnSignUpLoginButton(HomePage.java:20)
+at com.stepDefinitions.LoginSteps.i_click_on_signup_login_button(LoginSteps.java:46)
+at ✽.I click on the Signup Login button(file:///E:/JavaAutomationProject/CucumberAutomationProject/src/test/resources/features/Register.feature:7)
 ]]>
             </full-stacktrace>
-          </exception> <!-- io.cucumber.core.exception.CucumberException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.TestRunner@1e66f1f5]" started-at="2025-05-31T01:27:28 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-05-31T01:27:58 IST" duration-ms="30175" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.TestRunner@934b6cb]" started-at="2025-11-23T12:13:51 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-23T12:15:00 IST" duration-ms="68804" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -156,7 +143,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunners.TestRunner@1e66f1f5]" started-at="2025-05-31T01:27:58 IST" name="tearDownClass" finished-at="2025-05-31T01:28:15 IST" duration-ms="16838" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunners.TestRunner@934b6cb]" started-at="2025-11-23T12:15:00 IST" name="tearDownClass" finished-at="2025-11-23T12:15:05 IST" duration-ms="4996" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

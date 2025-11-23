@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\jasde\AppData\Local\Temp\testng-eclipse--809466864\testng-customsuite.xml</span>
+                    <span>C:\Users\jasde\AppData\Local\Temp\testng-eclipse-1162734211\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -117,22 +117,22 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testRunners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Successful Login with incorrect Credentials&quot;, &quot;User Login&quot;)">runScenario("Successful Login with incorrect Credentials", "User Login")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="testRunners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User attempts to register with an already existing email&quot;, &quot;User Registration and Authentication Fl...)">runScenario("User attempts to register with an already existing email", "User Registration and Authentication Fl...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testRunners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User logs out successfully after logging in&quot;, &quot;User Login&quot;)">runScenario("User logs out successfully after logging in", "User Login")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="testRunners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Successful Login with Correct Credentials&quot;, &quot;User Login&quot;)">runScenario("Successful Login with Correct Credentials", "User Login")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testRunners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Successful Login with Correct Credentials&quot;, &quot;User Login&quot;)">runScenario("Successful Login with Correct Credentials", "User Login")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="testRunners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Successful Login with incorrect Credentials&quot;, &quot;User Login&quot;)">runScenario("Successful Login with incorrect Credentials", "User Login")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="testRunners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User logs out successfully after logging in&quot;, &quot;User Login&quot;)">runScenario("User logs out successfully after logging in", "User Login")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -159,51 +159,32 @@
                   </a> <!-- runScenario("Register a new user successfully", "User Registration and Authentication Flow") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Register a new user successfully","User Registration and Authentication Flow")</span>
-                  <div class="stack-trace">io.cucumber.core.exception.CucumberException: Step [I enter a name and email address] is defined with 2 parameters at &apos;com.stepDefinitions.RegisterSteps.i_enter_a_name_and_email_address(java.lang.String,java.lang.String)&apos;.
-However, the gherkin step has 0 arguments.
-Step text: I enter a name and email address
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.arityMismatch(PickleStepDefinitionMatch.java:82)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:41)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:135)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
-	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:132)
-	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 60.000
+  (Session info: chrome=142.0.7444.135)
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [731b028fcbe6ef08171470d6c8240402, clickElement {id=f.1372E90B6C01BD79CC335E43708C19ED.d.5DFB0F8274DF0DAD2CAC75E933E326C2.e.7}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.135, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\jasde\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54915}, goog:processID: 100, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54915/devtoo..., se:cdpVersion: 142.0.7444.135, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (731b028fcbe6ef08171470d6c8240402)] -&gt; xpath: //a[@href=&apos;/login&apos;]]
+Session ID: 731b028fcbe6ef08171470d6c8240402
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at com.pages.HomePage.clickOnSignUpLoginButton(HomePage.java:20)
+	at com.stepDefinitions.LoginSteps.i_click_on_signup_login_button(LoginSteps.java:46)
+	at ✽.I click on the Signup Login button(file:///E:/JavaAutomationProject/CucumberAutomationProject/src/test/resources/features/Register.feature:7)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -220,30 +201,10 @@ Step text: I enter a name and email address
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Successful Login with incorrect Credentials&quot;, &quot;User Login&quot;)">
-                  </a> <!-- runScenario("Successful Login with incorrect Credentials", "User Login") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Successful Login with incorrect Credentials","User Login")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="runScenario(&quot;User attempts to register with an already existing email&quot;, &quot;User Registration and Authentication Fl...)">
                   </a> <!-- runScenario("User attempts to register with an already existing email", "User Registration and Authentication Fl...) -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("User attempts to register with an already existing email","User Registration and Authentication Flow")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;User logs out successfully after logging in&quot;, &quot;User Login&quot;)">
-                  </a> <!-- runScenario("User logs out successfully after logging in", "User Login") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("User logs out successfully after logging in","User Login")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -258,12 +219,32 @@ Step text: I enter a name and email address
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Successful Login with incorrect Credentials&quot;, &quot;User Login&quot;)">
+                  </a> <!-- runScenario("Successful Login with incorrect Credentials", "User Login") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Successful Login with incorrect Credentials","User Login")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User logs out successfully after logging in&quot;, &quot;User Login&quot;)">
+                  </a> <!-- runScenario("User logs out successfully after logging in", "User Login") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User logs out successfully after logging in","User Login")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\jasde\AppData\Local\Temp\testng-eclipse--809466864\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\jasde\AppData\Local\Temp\testng-eclipse-1162734211\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -324,28 +305,28 @@ data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'testRunners.TestRunner')
-data.setCell(0, 3, 30175);
+data.setCell(0, 3, 72590);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'testRunners.TestRunner')
-data.setCell(1, 3, 23601);
+data.setCell(1, 3, 68804);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'runScenario')
 data.setCell(2, 2, 'testRunners.TestRunner')
-data.setCell(2, 3, 12537);
+data.setCell(2, 3, 52025);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'runScenario')
 data.setCell(3, 2, 'testRunners.TestRunner')
-data.setCell(3, 3, 11640);
+data.setCell(3, 3, 29720);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'runScenario')
 data.setCell(4, 2, 'testRunners.TestRunner')
-data.setCell(4, 3, 11275);
+data.setCell(4, 3, 24791);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 4 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -373,34 +354,34 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">testRunners.TestRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@6fbf5db2)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@4e4f4092)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">runScenario("Successful Login with Correct Credentials", "User Login")</span>
-                <span class="method-start">1045 ms</span>
+                <span class="method-start">2041 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Successful Login with incorrect Credentials", "User Login")</span>
-                <span class="method-start">24649 ms</span>
+                <span class="method-start">31778 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("User logs out successfully after logging in", "User Login")</span>
-                <span class="method-start">36292 ms</span>
+                <span class="method-start">56573 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Register a new user successfully", "User Registration and Authentication Flow")</span>
-                <span class="method-start">48831 ms</span>
+                <span class="method-start">108601 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("User attempts to register with an already existing email", "User Registration and Authentication Fl...)</span>
-                <span class="method-start">60109 ms</span>
+                <span class="method-start">181202 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">90294 ms</span>
+                <span class="method-start">250015 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
