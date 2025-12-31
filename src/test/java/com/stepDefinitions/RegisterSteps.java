@@ -5,7 +5,6 @@ import org.testng.Assert;
 import com.pages.RegisterPage;
 import com.qa.factory.DriverFactory;
 import com.qa.util.YamlReader;
-import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -94,6 +93,12 @@ public class RegisterSteps {
 	public void i_should_see_the_error_message(String expectedErrorMessage) {
 		registerPage.verifyErrorMessage(expectedErrorMessage);
 		Assert.assertTrue(registerPage.verifyErrorMessage(expectedErrorMessage));
+	}
+
+	@Then("I should see \"Logged in as username\" text")
+	public void i_should_see_logged_in_as_username_text() {
+		// You may want to parameterize the username if needed
+		Assert.assertTrue(registerPage.verifyDisplayedText("Logged in as username"));
 	}
 
 }
